@@ -11,10 +11,11 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
 
 const Wrap = styled.div`
-  margin-top: ${props=>(props.headerHeight)};
+  margin-top: ${props=>(props.headerHeight)}px;
 `
 
 const Layout = ({ children }) => {
@@ -35,12 +36,8 @@ const Layout = ({ children }) => {
       <Header height={headerHeight} siteTitle={data.site.siteMetadata.title} />
       <Wrap headerHeight={headerHeight}>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </Wrap>
+      <Footer/>
     </>
   )
 }

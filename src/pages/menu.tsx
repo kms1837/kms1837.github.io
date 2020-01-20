@@ -96,10 +96,10 @@ const MainMenu = () => {
         <MenuWrap>
           <ItemDeco posY={decoPosY}>▶</ItemDeco>
           <Menu>
-            <MenuItem onMouseOver={itemOver} onClick={() => {itemClick('/portfolio')}}>
+            <MenuItem onMouseOver={itemOver} onClick={() => {itemClick('/portfolio/')}}>
               Portfolio
             </MenuItem>
-            <MenuItem onMouseOver={itemOver} onClick={() => {itemClick('/blog')}}>
+            <MenuItem onMouseOver={itemOver} onClick={() => {itemClick('/blog/')}}>
               Blog
             </MenuItem>
           </Menu>

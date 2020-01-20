@@ -7,6 +7,8 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 import BlackPanel from "../components/black-panel"
+import Cover from "../components/cover"
+import ContentSection from "../components/content-section"
 
 const Portfolio = () => {
   const [panelOption, setPanelOption] = useState({
@@ -19,13 +21,21 @@ const Portfolio = () => {
     <Layout>
       <SEO title="Home" />
       <BlackPanel opacity={panelOption.opacity} link={panelOption.link}/>
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
-      <Link to="/menu/">Go to page 2</Link>
+      <Cover></Cover>
+      <ContentSection title="About">
+        <h1>Hi people</h1>
+        <p>Welcome to your new Gatsby site.</p>
+        <p>Now go build something great.</p>
+        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+          <Image />
+        </div>
+      </ContentSection>
+      <ContentSection title="Skill" background="#f5f5f5">
+
+      </ContentSection>
+      <ContentSection title="Project" background="#e6e5e5">
+
+      </ContentSection>
     </Layout>
   )
 }

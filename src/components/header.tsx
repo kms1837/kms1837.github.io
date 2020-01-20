@@ -8,30 +8,49 @@ const FixedHeader = styled.header`
   top: 0;
   width: 100%;
   height: ${props => (props.height)}px;
-  background: #ccc;
+  background: white;
+`
+
+const Menu = styled.div`
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+`
+
+const LeftMenu = styled.div`
+  float: left;
+`
+
+const CenterMenu = styled.div`
+  display: inline-block;
+  margin: 0 auto;
+`
+
+const RightMenu = styled.div`
+  float: right;
+`
+
+const MenuItem = styled.div`
+  display: inline-block;
+  margin: 0 10px;
 `
 
 const Header = ({ height, siteTitle }) => (
   <FixedHeader height={height}>
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/test"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+    <Menu>
+      <LeftMenu>
+        <MenuItem>Home</MenuItem>
+      </LeftMenu>
+      <CenterMenu>
+        <MenuItem>About</MenuItem>
+        <MenuItem>Skill</MenuItem>
+        <MenuItem>Project</MenuItem>
+      </CenterMenu>
+      <RightMenu>
+        <MenuItem>Github</MenuItem>
+        <MenuItem>Blog</MenuItem>
+      </RightMenu>
+    </Menu>
   </FixedHeader>
 )
 
