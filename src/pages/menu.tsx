@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../components/layouts/page-layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import BasicLayout from "../components/basic-layout"
@@ -90,14 +90,16 @@ const MainMenu = () => {
   return (
     <div>
       <SEO title="Home" />
-      <BlackPanel opacity={panelOption.opacity} link={panelOption.link}/>
+      {/* <BlackPanel opacity={panelOption.opacity} link={panelOption.link}/> */}
       <Wrap>
         <Title>Main Menu</Title>
         <MenuWrap>
           <ItemDeco posY={decoPosY}>▶</ItemDeco>
           <Menu>
             <MenuItem onMouseOver={itemOver} onClick={() => {itemClick('/portfolio/')}}>
-              Portfolio
+              <Link to="/portfolio/">
+                Portfolio
+              </Link>
             </MenuItem>
             <MenuItem onMouseOver={itemOver} onClick={() => {itemClick('/blog/')}}>
               Blog

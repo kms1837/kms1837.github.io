@@ -11,7 +11,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GlobalStateProvider } from "../components/global-state"
 
 import Header from "./header"
-import "./layout.css"
 
 const BasicLayout = ({ children }) => {
   return (
