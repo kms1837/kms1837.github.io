@@ -1,0 +1,40 @@
+{
+  "skill": [
+    {
+      "title": "C",
+      "rate": 50,
+      "rank": "B",
+      "desc": "desc"
+    },
+    {
+      "title": "C++",
+      "rate": 80,
+      "rank": "B",
+      "desc": "desc"
+    },
+    {
+      "title": "C#",
+      "rate": 70,
+      "rank": "B",
+      "desc": "desc"
+    },
+    {
+      "title": "JAVA",
+      "rate": 50,
+      "rank": "B",
+      "desc": "desc"
+    },
+    {
+      "title": "Java Script",
+      "rate": 80,
+      "rank": "B",
+      "desc": "desc"
+    },
+    {
+      "title": "Python",
+      "rate": 70,
+      "rank": "B",
+      "desc": "desc"
+    }
+  ]
+}

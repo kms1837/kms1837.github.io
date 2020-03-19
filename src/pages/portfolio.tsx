@@ -9,7 +9,10 @@ import SEO from "../components/seo"
 import BlackPanel from "../components/black-panel"
 import Cover from "../components/cover"
 import ContentSection from "../components/content-section"
+import Skill from "../components/Skill"
+import ProjectListItem from "../components/ProjectListItem"
 
+import ProjectListData from "../json/project-list.json"
 
 const Portfolio = props => {
   const { scrollTop } = props;
@@ -27,19 +30,24 @@ const Portfolio = props => {
       <SEO title="Home" />
       {/* <BlackPanel opacity={panelOption.opacity} link={panelOption.link}/> */}
       <Cover scrollTop={scrollTop}></Cover>
+
       <ContentSection title="About" background="#fff">
-        <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem`, margin: "0 auto" }}>
           <Image />
         </div>
       </ContentSection>
+
       <ContentSection title="Skill" background="#f5f5f5">
-
+        <Skill></Skill>
       </ContentSection>
-      <ContentSection title="Project" background="#e6e5e5">
 
+      <ContentSection title="Project" background="#e6e5e5">
+        {ProjectListData.projects.map((item, index:number) => {
+          return (
+            <ProjectListItem title={item.title} desc={item.desc}>
+            </ProjectListItem>
+          )
+        })}
       </ContentSection>
     </Layout>
   )
