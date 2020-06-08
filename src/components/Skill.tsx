@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
 import SkillData from "../json/skill.json"
@@ -34,7 +34,7 @@ const Title = styled.h1`
   text-align: center;
 `
 const Desc = styled.p`
-  text-align: center;
+  text-align: left;
 `
 const SkillList = styled.div`
   position: relative;
@@ -54,25 +54,43 @@ const ListWrap= styled.div`
   left: 50%;
   top: 50%; 
   transform: translate(-50%,-50%);
-  width: 80%;
+  width: 100%;
 
   ul {
     list-style: none;
+    margin: 0;
+  }
+
+  .seleted {
+    background: #ccc;
   }
 `
 const ListItem = styled.li`
-  height: 30px;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
 `
 const Itemtitle = styled.p`
   float:left;
-  width: 120px;
-  margin-right: 10px;
+  width: 160px;
+  margin: 0;
+  line-height: 40px;
 `
-const Progress = styled.div`
+const ProgressWrap = styled.div`
   float:left;
+`
+
+const Progress = styled.div`
+  position: absolute;
+  
   background: #ccc;
   width: 320px;
-  height: 100%;
+  height: 80%;
+  top: 50%;
+
+  transform: translateY(-50%);
 `
 
 const Bar = styled.div`
@@ -80,31 +98,37 @@ const Bar = styled.div`
   height: 100%;
   background: #000;
 
-  width: ${props => props.rate/100 * 320}px;
+  width: ${props => props.rate}%;
 `
 
 const Skill = props => {
   const { project, desc } = props;
+  const [ skillIndex, setSkillIndex ] = useState(-1);
+  const currentSkill = SkillData.skill[skillIndex];
 
   return (
     <SkillWrap>
       <SkillDetail>
-        <DetailWrap>
-          <Rank>B</Rank>
-          <Title>C++</Title>
-          <Desc>desc</Desc>
-        </DetailWrap>
+        { currentSkill &&
+          <DetailWrap>
+            <Rank>{currentSkill.rank}</Rank>
+            <Title>{currentSkill.title}</Title>
+            <Desc>{currentSkill.desc}</Desc>
+          </DetailWrap>
+        }
       </SkillDetail>
       <SkillList>
         <ListWrap>
           <ul>
-            {SkillData.skill.map((item, index:number) => {
+            {SkillData.skill.map((item:any, index:number) => {
               return (
-                <ListItem>
+                <ListItem key={index} className={skillIndex==index ? "seleted" : ""} onClick={ () => { setSkillIndex(skillIndex===index? -1: index); }}>
                   <Itemtitle>{item.title}</Itemtitle>
-                  <Progress>
-                    <Bar rate={item.rate}></Bar>
-                  </Progress>
+                  <ProgressWrap>
+                    <Progress>
+                      <Bar rate={item.rate}></Bar>
+                    </Progress>
+                  </ProgressWrap>
                 </ListItem>
               )
             })}

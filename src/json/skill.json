@@ -1,40 +1,34 @@
 {
   "skill": [
     {
-      "title": "C",
-      "rate": 50,
+      "title": "C/C++",
+      "rate": 65,
       "rank": "B",
-      "desc": "desc"
-    },
-    {
-      "title": "C++",
-      "rate": 80,
-      "rank": "B",
-      "desc": "desc"
+      "desc": "cocos2d-x로 게임제작 개발 경험이 있고 C++11, C++14, C++17 어느정도 활용가능"
     },
     {
       "title": "C#",
       "rate": 70,
       "rank": "B",
-      "desc": "desc"
+      "desc": "유니티를 게임개발 할때사용 이 외로 윈도우폰 개발에 대해 공부하였음."
     },
     {
-      "title": "JAVA",
-      "rate": 50,
-      "rank": "B",
-      "desc": "desc"
+      "title": "JAVA / Android",
+      "rate": 30,
+      "rank": "C",
+      "desc": "Android교육을 받았으며 기본적인 앱을 만들어보았다."
     },
     {
-      "title": "Java Script",
+      "title": "Java Script(es6)",
       "rate": 80,
       "rank": "B",
-      "desc": "desc"
+      "desc": "크롬 확장 프로그램 방식으로 앱을 출시해 보았고, 여러 페이지에서 활용해보았으며, JQuery, React.js, Node.js 등 다뤄 보았다."
     },
     {
       "title": "Python",
       "rate": 70,
       "rank": "B",
-      "desc": "desc"
+      "desc": "게임사이트 소식을 크롤링하는 프로그램을 개발해 보았다. "
     }
   ]
 }
