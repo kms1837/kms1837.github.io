@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React from "react"
+import React, {forwardRef} from "react"
 import styled from "styled-components"
 
 const Section = styled.section`
@@ -17,13 +17,16 @@ const Title = styled.h1`
   margin-bottom: 20px;
 `
 
-const ContentSection = ({ children, title, background }) => (
-  <Section background={background}>
-    <ContentArticle>
-      {title && <Title>{title}</Title>}
-      {children}
-    </ContentArticle>
-  </Section>
-)
+const ContentSection = forwardRef<HTMLDivElement>((props, ref)=> {
+  const {children, title, background} = props;
+  return (
+    <Section background={background}>
+      <ContentArticle ref={ref}>
+        {title && <Title>{title}</Title>}
+        {children}
+      </ContentArticle>
+    </Section>
+  )
+})
 
 export default ContentSection
