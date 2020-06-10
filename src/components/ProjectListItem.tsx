@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const ItemWrap = styled.div`
   display: inline-block;
@@ -59,9 +61,15 @@ const ItemTitle = styled.h3`
 `
 
 const ItemDesc = styled.p`
-  height: 120px;
+  height: 80px;
   overflow: hidden;
   margin: 0;
+`
+
+const ItemLinks = styled.div`
+  height: 35px;
+  overflow: hidden;
+  text-align: right;
 `
 
 const ProjectListItem = props => {
@@ -82,6 +90,11 @@ const ProjectListItem = props => {
         <ItemDesc>
           {info.desc}
         </ItemDesc>
+        <ItemLinks>
+          {info.github && <a href={info.github}>
+            <FontAwesomeIcon icon={faGithub} size="2x"/>
+          </a>}
+        </ItemLinks>
       </ItemContent>
     </ItemWrap>
   )

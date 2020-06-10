@@ -22,6 +22,11 @@ const ProjectListWrap = styled.div`
   margin: 0 auto;
 `
 
+const AboutWrap = styled.div`
+  padding-top: 100px;
+  text-align: center;
+`
+
 const Portfolio = props => {
   const projectListArticle = useRef<HTMLDivElement>(null);
   const { scrollTop } = props;
@@ -50,9 +55,13 @@ const Portfolio = props => {
       <Cover scrollTop={scrollTop}></Cover>
 
       <ContentSection title="About" background="#fff">
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem`, margin: "0 auto" }}>
+        {/*<div style={{ maxWidth: `300px`, marginBottom: `1.45rem`, margin: "0 auto" }}>
           <Image />
-        </div>
+        </div>*/}
+        <AboutWrap>
+          <h2>"프로그래머가 되고싶어 외길을 걸어온 <b>강민석</b>입니다"</h2>
+          <h4>더 많은 기회와 배움을 위해 제주도에서 서울로, 군대에서도 배우고싶어 SW개발병으로, 지금도 멈추지 않고 프로그래머가 되기위해 도전중입니다.</h4>
+        </AboutWrap>
       </ContentSection>
 
       <ContentSection title="Skill" background="#f5f5f5">
