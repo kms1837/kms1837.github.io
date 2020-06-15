@@ -15,7 +15,7 @@ const ItemWrap = styled.div`
 
 `
 
-const ThumbnailHover = styled.div`
+const ThumbnailHover = styled.a`
   position: absolute;
   height: 100%;
   width: 100%;
@@ -78,8 +78,10 @@ const ProjectListItem = props => {
   return (
     <ItemWrap width={width}>
       <Thumbnail>
-        <ThumbnailHover>
-          <HoverCenterTitle>자세히 보기</HoverCenterTitle>
+        <ThumbnailHover href={`${info.url}`}>
+          <HoverCenterTitle>
+            자세히 보기
+          </HoverCenterTitle>
         </ThumbnailHover>
         <ThumbnailImage></ThumbnailImage>
       </Thumbnail>

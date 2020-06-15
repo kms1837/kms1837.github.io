@@ -4,56 +4,64 @@
         "thumbnail": "",
         "title": "이세계 동사무소",
         "desc": "이세계의 동사무소를 운영하는 액션 퍼즐게임",
-        "url": ""
+        "url": "fantasy_offce",
+        "github": "https://github.com/kms1837/fantasy-office"
       },
       {
         "thumbnail": "",
         "title": "Circle Boom",
         "desc": "구체 세개가 모여있는곳에 원을그려 터트리는 게임",
-        "url": "",
+        "url": "circle_boom",
         "github": "https://github.com/kms1837/Circle_Boom"
       },
       {
         "thumbnail": "",
-        "title": "유저 필터링 크롬 확장 프로그램",
+        "title": "유저 관리 크롬 확장 프로그램",
         "desc": "관리대상 유저를 추가하고 게시판에서 지우거나 강조를 시켜주는 크롬 확장프로그램",
-        "url": "",
+        "url": "chrome_extension",
         "github": "https://github.com/kms1837/Ruliweb_Support"
       },
       {
         "thumbnail": "",
         "title": "Project DT",
         "desc": "동료를 모으고 던전 특성에 맞게 직업과 스킬을 조합하여 해쳐나가는 게임",
-        "url": "",
+        "url": "dt",
         "github": "https://github.com/kms1837/DT"
       },
       {
         "thumbnail": "",
         "title": "Project MS",
         "desc": "경험, 배움 등 다양한 방법으로 스킬을 획득하여 진행하는 횡스크롤 RPG 게임",
-        "url": "",
+        "url": "ms",
         "github": "https://github.com/kms1837/ProjectMS"
       },
       {
         "thumbnail": "",
         "title": "세종대학교 캡스톤 프로젝트",
         "desc": "세종대학교 캡스톤 강의 팀프로젝트로 교내 SW역량평가 웹 서비스.",
-        "url": "",
+        "url": "capstone",
         "github": "https://github.com/kms1837/capstone_4"
       },
       {
         "thumbnail": "",
         "title": "Portfolio Web Creator",
         "desc": "세종대학교 오픈소스SW공학 강의 팀프로젝트로 웹에서 간이 포트폴리오 페이지를 생성해주는 웹 서비스",
-        "url": "",
+        "url": "pwc",
         "github": ""
       },
       {
         "thumbnail": "",
         "title": "디스코드 한국 게임뉴스봇",
         "desc": "디스이즈게임, 루리웹, 인벤, 트위터, 스팀 동시접속자 순위 등 페이지를 크롤링하여 채팅창에 최신 게임 뉴스 정보를 보여주는 디스코드 봇",
-        "url": "",
+        "url": "news_bot",
         "github": "https://github.com/kms1837/discord-game_news-bot"
+      },
+      {
+        "thumbnail": "",
+        "title": "포트폴리오 페이지",
+        "desc": "저를 나타내기 위한 포트폴리오 페이지로 react, styled-component, gatsby 등을 활용하였습니다.",
+        "url": "pp",
+        "github": "https://github.com/kms1837/kms1837.github.io"
       },
       {
         "thumbnail": "",
