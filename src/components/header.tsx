@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled, { css } from "styled-components"
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faUser, faListAlt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -55,6 +56,10 @@ const MenuItem = styled.div`
   a:link, a:visited, a:active {text-decoration: none; color: ${props => props.scrollTop ? "#fff" : "#333333"};}
 `
 
+const scrollToPosition = () => {
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
 const Header = props => {
   const { height, siteTitle, scrollTop } = props;
   return (
@@ -64,9 +69,10 @@ const Header = props => {
           <MenuItem scrollTop={scrollTop}><FontAwesomeIcon icon={faHome} size="2x"/></MenuItem>
         </LeftMenu>
         <CenterMenu>
-          <MenuItem scrollTop={scrollTop}>About</MenuItem>
-          <MenuItem scrollTop={scrollTop}>Skill</MenuItem>
-          <MenuItem scrollTop={scrollTop}>Project</MenuItem>
+          <MenuItem scrollTop={scrollTop} onClick={ () => scrollToPosition(0)}>Home</MenuItem>
+          <MenuItem scrollTop={scrollTop} onClick={ () => scrollTo('#About')}>About</MenuItem>
+          <MenuItem scrollTop={scrollTop} onClick={ () => scrollTo('#Skill')}>Skill</MenuItem>
+          <MenuItem scrollTop={scrollTop} onClick={ () => scrollTo('#Project')}>Project</MenuItem>
         </CenterMenu>
         <RightMenu>
           <MenuItem scrollTop={scrollTop}>

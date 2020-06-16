@@ -40,7 +40,7 @@ const HoverCenterTitle = styled.h2`
   margin: 0 auto;
   border: 3px solid #fff;
   border-radius: 5px;
-  padding: 5px 0;
+  padding: 10px 0;
 `
 
 const Thumbnail = styled.div`

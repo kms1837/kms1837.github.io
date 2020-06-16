@@ -34,10 +34,10 @@ const ProfileImgWrap = styled.div`
 `
 
 const Cover = props => {
-  const {scrollTop} = props
+  const {id, scrollTop} = props
 
   return (
-    <CoverSection scrollTop={scrollTop}>
+    <CoverSection id={id} scrollTop={scrollTop}>
       <CenterArticle>
         <ProfileImgWrap></ProfileImgWrap>
         <h1>강민석</h1>

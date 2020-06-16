@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 const Section = styled.section`
   background: ${props => (props.background)};
+  padding: 80px 0;
 `
 
 const ContentArticle = styled.article`
@@ -18,9 +19,9 @@ const Title = styled.h1`
 `
 
 const ContentSection = forwardRef<HTMLDivElement>((props, ref)=> {
-  const {children, title, background} = props;
+  const {children, id, title, background} = props;
   return (
-    <Section background={background}>
+    <Section id={id} background={background}>
       <ContentArticle ref={ref}>
         {title && <Title>{title}</Title>}
         {children}

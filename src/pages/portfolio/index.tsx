@@ -53,9 +53,9 @@ const Portfolio = props => {
     <Layout>
       <SEO title="Home" />
       {/* <BlackPanel opacity={panelOption.opacity} link={panelOption.link}/> */}
-      <Cover scrollTop={scrollTop}></Cover>
+      <Cover id="Home" scrollTop={scrollTop}></Cover>
 
-      <ContentSection title="About" background="#fff">
+      <ContentSection id="About" title="About" background="#fff">
         {/* <Image file="gatsby-astronaut.png"/> */}
         <AboutWrap>
           <h2>"프로그래머가 되고싶어 외길을 걸어온 <b>강민석</b>입니다"</h2>
@@ -63,11 +63,11 @@ const Portfolio = props => {
         </AboutWrap>
       </ContentSection>
 
-      <ContentSection title="Skill" background="#f5f5f5">
+      <ContentSection id="Skill" title="Skill" background="#f5f5f5">
         <Skill></Skill>
       </ContentSection>
 
-      <ContentSection title="Project" background="#e6e5e5" ref={projectListArticle}>
+      <ContentSection id="Project" title="Project" background="#e6e5e5" ref={projectListArticle}>
         <ProjectListWrap width={projectListWidth}>
           {ProjectListData.projects.map((item:any, index:number) => {
             return (
