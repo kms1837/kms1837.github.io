@@ -1,49 +1,49 @@
 {
     "projects" : [
       {
-        "thumbnail": "",
+        "thumbnail": "fantasy_office_thumbnail.jpg",
         "title": "이세계 동사무소",
         "desc": "이세계의 동사무소를 운영하는 액션 퍼즐게임",
         "url": "fantasy_offce",
         "github": "https://github.com/kms1837/fantasy-office"
       },
       {
-        "thumbnail": "",
+        "thumbnail": "circle_boom_thumbnail.jpg",
         "title": "Circle Boom",
         "desc": "구체 세개가 모여있는곳에 원을그려 터트리는 게임",
         "url": "circle_boom",
         "github": "https://github.com/kms1837/Circle_Boom"
       },
       {
-        "thumbnail": "",
+        "thumbnail": "chrome_thumbnail.jpg",
         "title": "유저 관리 크롬 확장 프로그램",
         "desc": "관리대상 유저를 추가하고 게시판에서 지우거나 강조를 시켜주는 크롬 확장프로그램",
         "url": "chrome_extension",
         "github": "https://github.com/kms1837/Ruliweb_Support"
       },
       {
-        "thumbnail": "",
+        "thumbnail": "dt_thumbnail.jpg",
         "title": "Project DT",
         "desc": "동료를 모으고 던전 특성에 맞게 직업과 스킬을 조합하여 해쳐나가는 게임",
         "url": "dt",
         "github": "https://github.com/kms1837/DT"
       },
       {
-        "thumbnail": "",
+        "thumbnail": "ms_thumbnail.jpg",
         "title": "Project MS",
         "desc": "경험, 배움 등 다양한 방법으로 스킬을 획득하여 진행하는 횡스크롤 RPG 게임",
         "url": "ms",
         "github": "https://github.com/kms1837/ProjectMS"
       },
       {
-        "thumbnail": "",
+        "thumbnail": "capstone_thumbnail.jpg",
         "title": "세종대학교 캡스톤 프로젝트",
         "desc": "세종대학교 캡스톤 강의 팀프로젝트로 교내 SW역량평가 웹 서비스.",
         "url": "capstone",
         "github": "https://github.com/kms1837/capstone_4"
       },
       {
-        "thumbnail": "",
+        "thumbnail": "pwc_thumbnail.jpg",
         "title": "Portfolio Web Creator",
         "desc": "세종대학교 오픈소스SW공학 강의 팀프로젝트로 웹에서 간이 포트폴리오 페이지를 생성해주는 웹 서비스",
         "url": "pwc",

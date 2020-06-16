@@ -20,6 +20,7 @@ const listItemMargin = 10;
 const ProjectListWrap = styled.div`
   width: ${props => props.width}px;
   margin: 0 auto;
+  transition: 0.5s all;
 `
 
 const AboutWrap = styled.div`

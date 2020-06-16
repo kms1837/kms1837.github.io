@@ -30,7 +30,6 @@ const Blog = () => {
       <Wrap>
         <h1>Blog는 공사중...</h1>
         <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Img />
         </div>
         <Link to="/menu/">이전으로 돌아가기</Link>
       </Wrap>
