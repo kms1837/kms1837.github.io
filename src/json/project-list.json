@@ -33,6 +33,22 @@
         "category": ["game", "unity"]
       },
       {
+        "thumbnail": "care_cat_thumbnail.jpg",
+        "title": "케어캣",
+        "desc": "SW마에스트로4기 1단계 프로젝트로 음식을 훔쳐가는 동물 3마리를 터치로 원을그려 고양이에게 음식을 먹이는 게임",
+        "url": "care_cat",
+        "github": "",
+        "category": ["game"]
+      },
+      {
+        "thumbnail": "go3_thumbnail.jpg",
+        "title": "고삼입니다",
+        "desc": "고등학교 3학년 학생을 시업식부터 졸업식까지 키우는 게임",
+        "url": "go3",
+        "github": "",
+        "category": ["game", "unity"]
+      },
+      {
         "thumbnail": "chrome_thumbnail.jpg",
         "title": "유저 관리 크롬 확장 프로그램",
         "desc": "관리대상 유저를 추가하고 게시판에서 지우거나 강조를 시켜주는 크롬 확장프로그램",
@@ -57,15 +73,7 @@
         "category": ["web"]
       },
       {
-        "thumbnail": "",
-        "title": "디스코드 한국 게임뉴스봇",
-        "desc": "디스이즈게임, 루리웹, 인벤, 트위터, 스팀 동시접속자 순위 등 페이지를 크롤링하여 채팅창에 최신 게임 뉴스 정보를 보여주는 디스코드 봇",
-        "url": "news_bot",
-        "github": "https://github.com/kms1837/discord-game_news-bot",
-        "category": ["python"]
-      },
-      {
-        "thumbnail": "",
+        "thumbnail": "pp_thumbnail.jpg",
         "title": "포트폴리오 페이지",
         "desc": "저를 나타내기 위한 포트폴리오 페이지로 react, styled-component, gatsby 등을 활용하였습니다.",
         "url": "pp",
@@ -73,17 +81,18 @@
         "category": ["web"]
       },
       {
-        "thumbnail": "",
-        "title": "게임잼 프로젝트",
-        "desc": "동아리, 외부 등에서 1,2일 동안 개발한 게임들 입니다.",
-        "url": "",
-        "github": ""
+        "thumbnail": "news_bot_thumbnail.jpg",
+        "title": "디스코드 한국 게임뉴스봇",
+        "desc": "디스이즈게임, 루리웹, 인벤, 트위터, 스팀 동시접속자 순위 등 페이지를 크롤링하여 채팅창에 최신 게임 뉴스 정보를 보여주는 디스코드 봇",
+        "url": "news_bot",
+        "github": "https://github.com/kms1837/discord-game_news-bot",
+        "category": ["python"]
       },
       {
-        "thumbnail": "",
-        "title": "대학교 과제 프로젝트들",
-        "desc": "대학교를 다니며 과제로 진행한 프로젝트들입니다.",
-        "url": "",
+        "thumbnail": "gamejams_thumbnail.jpg",
+        "title": "게임잼과 해커톤 프로젝트",
+        "desc": "동아리 내부, 학교내부, 외부 등 게임잼을 참여하여 개발한 프로젝트입니다.",
+        "url": "gamejams",
         "github": ""
       }
     ]
