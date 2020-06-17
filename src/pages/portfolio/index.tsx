@@ -29,6 +29,18 @@ const AboutWrap = styled.div`
   text-align: center;
 `
 
+const Title = styled.h2`
+  color: #FF7700;
+`
+
+const Desc = styled.h4`
+  text-align: left;
+  margin: 0 auto;
+  width: 80%;
+  font-weight: 100;
+  line-height: 1.2;
+`
+
 const Background = styled.div`
   position: fixed;
   left: 0;
@@ -109,8 +121,8 @@ const Portfolio = props => {
       <ContentSection id="About" title="About" background="#fff">
         {/* <Image file="gatsby-astronaut.png"/> */}
         <AboutWrap>
-          <h2>"프로그래머가 되고싶어 외길을 걸어온 <b>강민석</b>입니다"</h2>
-          <h4>더 많은 기회와 배움을 위해 제주도에서 서울로, 군대에서도 배우고싶어 SW개발병으로, 지금도 멈추지 않고 프로그래머가 되기위해 도전중입니다.</h4>
+          <Title>"프로그래머가 되고싶어 외길을 걸어온 <b>강민석</b>입니다"</Title>
+          <Desc>더 많은 기회와 배움을 위해 제주도에서 서울로, 게임개발에 대한 교류를 위해 학교 게임 개발 동아리에 들어가 졸업할때까지 활동, 군대에서도 배우고싶어 SW개발병으로, 지금도 멈추지 않고 프로그래머가 되기위해 도전중입니다.</Desc>
         </AboutWrap>
         <History play={playAbout}/>
       </ContentSection>

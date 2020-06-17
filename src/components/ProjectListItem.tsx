@@ -26,7 +26,7 @@ const ThumbnailHover = styled.a`
   height: 100%;
   width: 100%;
   top: 0;
-  background: #00000080;
+  background: #FF770080;
   opacity: 0;
   transition: 0.35s opacity;
 `
@@ -71,7 +71,7 @@ const ItemContent = styled.div`
 `
 
 const ItemTitle = styled.h3`
-
+  color: #FF7700;
 `
 
 const ItemDesc = styled.p`

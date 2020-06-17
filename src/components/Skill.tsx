@@ -26,9 +26,9 @@ const Rank = styled.div`
   width: 150px;
   height: 150px;
   line-height: 150px;
-  background: #fff;
+  background: #FF7700;
   font-size: 95px;
-  color: #777;
+  color: #fff;
   margin-bottom: 25px;
 `
 const Title = styled.h1`

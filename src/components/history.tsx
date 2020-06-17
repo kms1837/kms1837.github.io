@@ -14,6 +14,8 @@ const DateWrap = styled.div`
   width: 100%;
   font-size: 20px;
   font-weight: bold;
+
+  color: #FF7700;
 `
 
 const EndCircle = styled.div`
@@ -38,7 +40,7 @@ const EventWrap = styled(motion.div)`
 
 const PointCircle = styled.div`
   border-radius: 100%;
-  border: 3px solid #777;
+  border: 3px solid #FF7700;
   width: 30px;
   height: 30px;
   margin: 0 auto;
@@ -68,24 +70,16 @@ const History = props => {
   const commonAnimaSetting = {ease: "easeOut", duration: 0.5};
   const commonAnima = {opacity: [0, 1], top: ["0%", "43%"]};
 
-  const evnetCount = 8
+  const evnetCount = 9
 
   for(let i=0; i<evnetCount; i++) {
     eventAnimationControls.push(useAnimation());
   }
 
   const sequence = async() => {
-    /*
-    await eventAnimationControls[0].start(commonAnima);
-    await eventAnimationControls[1].start(commonAnima);
-    await eventAnimationControls[2].start(commonAnima);
-    */
     for (const control of eventAnimationControls) {
       await control.start(commonAnima);
     }
-    /*await eventAnimationControls.map(async(control) => {
-      return await control.start(commonAnima);
-    })*/
   }
 
   useEffect(() => {
@@ -130,12 +124,17 @@ const History = props => {
         <EventLabel>세종대학교 입학</EventLabel>
       </EventWrap>
 
-      <EventWrap x={50} animate={eventAnimationControls[5]} transition={commonAnimaSetting}>
+      <EventWrap x={47} animate={eventAnimationControls[5]} transition={commonAnimaSetting}>
+        <PointCircle/>
+        <EventLabel>게임개발 소모임 판도라큐브 가입</EventLabel>
+      </EventWrap>
+
+      <EventWrap x={55} animate={eventAnimationControls[6]} transition={commonAnimaSetting}>
         <PointCircle/>
         <EventLabel>SW마에스트로 4기</EventLabel>
       </EventWrap>
 
-      <EventWrap x={60} animate={eventAnimationControls[6]} transition={commonAnimaSetting}>
+      <EventWrap x={65} animate={eventAnimationControls[7]} transition={commonAnimaSetting}>
         <DateWrap>
           2015
         </DateWrap>
@@ -143,7 +142,7 @@ const History = props => {
         <EventLabel>SW개발병</EventLabel>
       </EventWrap>
 
-      <EventWrap x={80} animate={eventAnimationControls[7]} transition={commonAnimaSetting}>
+      <EventWrap x={80} animate={eventAnimationControls[8]} transition={commonAnimaSetting}>
         <DateWrap>
           2019
         </DateWrap>
