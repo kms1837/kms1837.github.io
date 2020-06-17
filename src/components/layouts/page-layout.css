@@ -610,3 +610,8 @@ pre tt:after {
 
 
 a:link, a:visited, a:active {text-decoration: none; color: #333;}
+
+::selection {
+  background: #FF7700;
+  color: #fff;
+}

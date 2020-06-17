@@ -30,7 +30,10 @@ const AboutWrap = styled.div`
 `
 
 const Title = styled.h2`
-  color: #FF7700;
+  background: #FF7700;
+  padding: 5px 10px;
+  color: #fff;
+  display: inline-block;
 `
 
 const Desc = styled.h4`
