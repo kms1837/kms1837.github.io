@@ -11,7 +11,7 @@ category: "web"
 ---
 
 ### 소개
-저를 나타내기 위한 포트폴리오 페이지로 react, styled-component, gatsby 등을 활용하였습니다.
+저를 나타내기 위한 포트폴리오 페이지로 react, gatsby, styled-component, framer-motion 등을 활용하였습니다.
 
 ### 팀 구성
 * 1인 프로젝트

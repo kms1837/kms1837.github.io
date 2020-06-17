@@ -2,7 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import Image from "../components/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faUnity, faPython } from "@fortawesome/free-brands-svg-icons";
+import { faGamepad, faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const ItemWrap = styled.div`
   display: inline-block;
@@ -15,6 +16,9 @@ const ItemWrap = styled.div`
   margin-bottom: 10px;
   margin-right: 10px;
   background: #fff;
+
+  opacity: ${props => props.show ? 1 : 0};
+  transition: 1s opacity;
 `
 
 const ThumbnailHover = styled.a`
@@ -74,19 +78,30 @@ const ItemDesc = styled.p`
   height: 80px;
   overflow: hidden;
   margin: 0;
+  margin-bottom: 20px;
+`
+
+const ItemCategory = styled.div`
+  float: left;
+  height: 45px;
+  svg {
+    margin-right: 5px;
+  }
 `
 
 const ItemLinks = styled.div`
   height: 35px;
   overflow: hidden;
   text-align: right;
+  float: right;
+  height: 45px;
 `
 
 const ProjectListItem = props => {
-  const { info, width } = props;
+  const { info, width, play } = props;
 
   return (
-    <ItemWrap width={width}>
+    <ItemWrap show={play} width={width}>
       <Thumbnail>
         <ThumbnailImage>
           {info.thumbnail && <Image file={`thumbnail/${info.thumbnail}`}/>}
@@ -104,6 +119,21 @@ const ProjectListItem = props => {
         <ItemDesc>
           {info.desc}
         </ItemDesc>
+        <ItemCategory>
+          {info.category && info.category.map((categoryName) => {
+            switch (categoryName) {
+              case "game":
+                return (<FontAwesomeIcon icon={faGamepad} size="2x"/>);
+              case "unity":
+                return (<FontAwesomeIcon icon={faUnity} size="2x"/>);
+              case "web":
+                return (<FontAwesomeIcon icon={faGlobe} size="2x"/>);
+              case "python":
+                return (<FontAwesomeIcon icon={faPython} size="2x"/>);
+            }
+          })
+          }
+        </ItemCategory>
         <ItemLinks>
           {info.github && <a href={info.github}>
             <FontAwesomeIcon icon={faGithub} size="2x"/>

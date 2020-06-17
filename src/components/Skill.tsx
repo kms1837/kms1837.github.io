@@ -10,6 +10,7 @@ const SkillDetail = styled.div`
   height: 100%;
   padding: 10px;
   background: #fff;
+  transition: 0.5s background;
 `
 
 const DetailWrap = styled.div`
@@ -25,17 +26,53 @@ const Rank = styled.div`
   width: 150px;
   height: 150px;
   line-height: 150px;
-  background: #ccc;
+  background: #fff;
   font-size: 95px;
-  color: #fff;
-  margin-bottom: 10px;
+  color: #777;
+  margin-bottom: 25px;
 `
 const Title = styled.h1`
   text-align: center;
 `
+
 const Desc = styled.p`
   text-align: left;
+  height: 80px;
 `
+const DetailProgress = styled.div`
+  position: relative;
+  height: 80px;
+`
+
+const Note = styled.div`
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  font-size: 12px;
+  overflow: hidden;
+`
+
+const NoteLeft = styled.div`
+  float: left;
+  width: 20%;
+  white-space: nowrap;
+`
+
+const NoteCenter = styled.div`
+  float:left;
+  width: 60%;
+  white-space: nowrap;
+  text-align: center;
+`
+
+const NoteRight = styled.div`
+  float: right;
+  width: 20%;
+  text-align: right;
+  white-space: nowrap;
+`
+
+
 const SkillList = styled.div`
   position: relative;
   float: right;
@@ -46,7 +83,12 @@ const SkillList = styled.div`
 `
 
 const SkillWrap = styled.div`
-  height: 500px;
+  height: 550px;
+
+  .open {
+    background: #777;
+    color: #fff;
+  }
 `
 
 const ListWrap= styled.div`
@@ -62,7 +104,8 @@ const ListWrap= styled.div`
   }
 
   .seleted {
-    background: #ccc;
+    background: #777;
+    color: #fff;
   }
 `
 const ListItem = styled.li`
@@ -71,24 +114,38 @@ const ListItem = styled.li`
   cursor: pointer;
   margin: 0;
   position: relative;
+
+  transition: 0.5s background;
 `
 const Itemtitle = styled.p`
   float:left;
-  width: 160px;
+  max-width: 160px;
+  width: 25%;
   margin: 0;
   line-height: 40px;
+
+  user-select: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 `
 const ProgressWrap = styled.div`
+  position: relative;
   float:left;
+  width: 72%;
+  height: 100%;
 `
 
 const Progress = styled.div`
   position: absolute;
   
-  background: #ccc;
-  width: 320px;
+  background: #EEEEEE;
+  width: 100%;
   height: 80%;
   top: 50%;
+
+  border-radius: 5px;
+  overflow: hidden;
 
   transform: translateY(-50%);
 `
@@ -96,24 +153,51 @@ const Progress = styled.div`
 const Bar = styled.div`
   float: left;
   height: 100%;
-  background: #000;
+  background: #FF7700;
 
+  width: 0%;
   width: ${props => props.rate}%;
+  transition: 1s width;
+`
+
+const CenterLine = styled.div`
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background: #777;
 `
 
 const Skill = props => {
-  const { project, desc } = props;
+  const { project, desc, play } = props;
   const [ skillIndex, setSkillIndex ] = useState(-1);
   const currentSkill = SkillData.skill[skillIndex];
 
   return (
     <SkillWrap>
-      <SkillDetail>
-        { currentSkill &&
+      <SkillDetail className={currentSkill && "open"}>
+        { currentSkill ?
           <DetailWrap>
             <Rank>{currentSkill.rank}</Rank>
             <Title>{currentSkill.title}</Title>
             <Desc>{currentSkill.desc}</Desc>
+            <DetailProgress>
+              <Progress>
+                <CenterLine />
+                <Bar rate={currentSkill.rate}></Bar>
+              </Progress>
+              <Note>
+                <NoteLeft>기초학습</NoteLeft>
+                <NoteCenter>사용가능</NoteCenter>
+                <NoteRight>자신있음</NoteRight>
+              </Note>
+            </DetailProgress>
+          </DetailWrap>
+          :
+          <DetailWrap>
+            <h3>오른쪽에 탭을 선택해주세요</h3>
           </DetailWrap>
         }
       </SkillDetail>
@@ -126,7 +210,7 @@ const Skill = props => {
                   <Itemtitle>{item.title}</Itemtitle>
                   <ProgressWrap>
                     <Progress>
-                      <Bar rate={item.rate}></Bar>
+                      <Bar rate={play ? item.rate: 0}></Bar>
                     </Progress>
                   </ProgressWrap>
                 </ListItem>

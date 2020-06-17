@@ -3,8 +3,10 @@ import React, {forwardRef} from "react"
 import styled from "styled-components"
 
 const Section = styled.section`
+  position: relative;
   background: ${props => (props.background)};
   padding: 80px 0;
+  z-index: 1;
 `
 
 const ContentArticle = styled.article`

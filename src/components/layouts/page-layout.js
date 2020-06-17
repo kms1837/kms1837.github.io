@@ -54,7 +54,7 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const headerHeight = 60;
+  const headerHeight = 50;
   const scrollTop = useScroll()
 
   const childrenWithProps = React.Children.map(children, child => (

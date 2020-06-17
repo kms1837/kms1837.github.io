@@ -37,7 +37,7 @@ const Title = styled.h1`
   font-size: 80px;
   width: 100%;
 
-  user-select:none;
+  user-select: none;
 `
 
 const Links = styled.div`

@@ -12,7 +12,7 @@ const FixedHeader = styled.header`
   top: 0;
   width: 100%;
   background: ${props => props.scrollTop ? "rgba(255, 255, 255, 0)" : "rgba(255, 255, 255, 0.9)"};
-  z-index: 1;
+  z-index: 5;
   transition: 1s all;
 
   ${props => !props.scrollTop && css`
@@ -25,24 +25,31 @@ const Menu = styled.div`
   width: 100%;
   margin: 10px 0;
   line-height: ${props => (props.height)}px;
+  height: ${props => (props.height)}px;
 `
 
 const LeftMenu = styled.div`
+  position: relative;
   float: left;
-  width: 25%;
+  width: 20%;
 `
 
 const CenterMenu = styled.div`
   display: inline-block;
   margin: 0 auto;
   text-align: center;
-  width: 50%;
+  width: 60%;
+  overflow: hidden;
+  white-space: nowrap;
 `
 
 const RightMenu = styled.div`
+  position: relative;
   float: right;
-  width: 25%;
+  width: 20%;
   text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
 `
 
 const MenuItem = styled.div`
@@ -54,6 +61,10 @@ const MenuItem = styled.div`
   color: ${props => props.scrollTop ? "#fff" : "#333333"};
 
   a:link, a:visited, a:active {text-decoration: none; color: ${props => props.scrollTop ? "#fff" : "#333333"};}
+
+  svg {
+    vertical-align: middle;
+  }
 `
 
 const scrollToPosition = () => {
@@ -66,7 +77,11 @@ const Header = props => {
     <FixedHeader scrollTop={scrollTop}>
       <Menu height={height}>
         <LeftMenu>
-          <MenuItem scrollTop={scrollTop}><FontAwesomeIcon icon={faHome} size="2x"/></MenuItem>
+          <MenuItem scrollTop={scrollTop}>
+            <Link to="/portfolio/">
+              <FontAwesomeIcon icon={faHome} size="2x"/>
+            </Link>
+          </MenuItem>
         </LeftMenu>
         <CenterMenu>
           <MenuItem scrollTop={scrollTop} onClick={ () => scrollToPosition(0)}>Home</MenuItem>
