@@ -7,6 +7,7 @@ date: "2020-06-16"
 github: "https://github.com/kms1837/Ruliweb_Support"
 file: "https://chrome.google.com/webstore/detail/ruliweb-board-support/hckkohbdkadobaoejafijhklaacifphp"
 category: "Chrome"
+images: ["chrome/1.png"]
 ---
 
 ### 소개

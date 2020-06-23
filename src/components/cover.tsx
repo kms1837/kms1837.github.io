@@ -1,6 +1,8 @@
-import { Link } from "gatsby"
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
+import { motion, useAnimation } from "framer-motion"
+import Image from "./image"
+import Contect from "./contect"
 
 const CoverSection = styled.section`
   position: relative;
@@ -11,7 +13,7 @@ const CoverSection = styled.section`
   transition: 1s all;
 `
 
-const CenterArticle = styled.article`
+const CenterArticle = styled(motion.article)`
   position: absolute;
   left: 50%;
   top: 50%;
@@ -22,6 +24,8 @@ const CenterArticle = styled.article`
   color: white;
 
   text-align: center;
+
+  opacity: 0;
 `
 
 const ProfileImgWrap = styled.div`
@@ -31,17 +35,38 @@ const ProfileImgWrap = styled.div`
   border: 3px solid #fff;
 
   margin: 20px auto;
+  overflow: hidden;
+`
+
+const LinkBox = styled.div`
+  display: inline-block;
+  border: 2px solid #fff;
+  padding: 10px;
+  border-radius: 5px;
 `
 
 const Cover = props => {
   const {id, scrollTop} = props
+  const openAnima = useAnimation();
+  
+  useEffect( () => {
+    openAnima.start({
+      opacity: [0, 1],
+      top: ["45%", "50%"]
+    });
+  }, []);
 
   return (
     <CoverSection id={id} scrollTop={scrollTop}>
-      <CenterArticle>
-        <ProfileImgWrap></ProfileImgWrap>
+      <CenterArticle animate={openAnima} transition={{duration: 1}}>
+        <ProfileImgWrap>
+          <Image file="profile.jpg"/>
+        </ProfileImgWrap>
         <h1>강민석</h1>
         <p>게임 개발자 지망생이며 웹개발이 취미입니다.</p>
+        <LinkBox>
+          <Contect />
+        </LinkBox>
       </CenterArticle>
     </CoverSection>
   )

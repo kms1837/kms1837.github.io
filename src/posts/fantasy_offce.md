@@ -7,6 +7,7 @@ date: "2020-06-16"
 github: "https://github.com/kms1837/fantasy-office"
 file: "https://github.com/kms1837/fantasy-office/releases/download/v0.0.3/prototype_v2_200615.zip"
 category: "Game"
+images: ["fantasy_office/1.png", "fantasy_office/2.png", "fantasy_office/3.png", "fantasy_office/4.png"]
 ---
 
 ### 소개

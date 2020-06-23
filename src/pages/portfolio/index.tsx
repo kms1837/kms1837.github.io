@@ -11,7 +11,7 @@ import Cover from "../../components/cover"
 import ContentSection from "../../components/content-section"
 import History from "../../components/History"
 import Skill from "../../components/Skill"
-import ProjectListItem from "../../components/ProjectListItem"
+import ProjectListItem from "../../components/projectListItem"
 
 import ProjectListData from "../../json/project-list.json"
 
@@ -112,11 +112,11 @@ const Portfolio = props => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Portfolio" />
       {/* <BlackPanel opacity={panelOption.opacity} link={panelOption.link}/> */}
       <Background>
         <BlackBackground />
-        <Image file="background_blur.jpg"/>
+        <Image file="background2.jpg"/>
       </Background>
 
       <Cover id="Home" scrollTop={scrollTop}></Cover>

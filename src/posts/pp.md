@@ -8,6 +8,7 @@ github: "https://github.com/kms1837/kms1837.github.io"
 file: ""
 url: "https://kms1837.github.io/portfolio/"
 category: "web"
+images: ["pp/1.png", "pp/2.png", "pp/3.png", "pp/4.png"]
 ---
 
 ### 소개

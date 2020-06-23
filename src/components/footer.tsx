@@ -1,9 +1,6 @@
-import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faUser, faMailBulk } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Contect from "./contect";
 
 const StyledFooter = styled.footer`
   position: relative;
@@ -15,20 +12,9 @@ const StyledFooter = styled.footer`
   text-align: center;
   z-index: 1;
 `
-const Contect = styled.div`
-    display: inline-block;
-    margin: 0 auto;
-    text-align: left;
 
-    margin-bottom: 20px;
-`
-const Item = styled.div`
-  display: inline-block;
-  margin: 0 5px;
-
-  a:link {text-decoration: none; color: #fff;}
-  a:visited {text-decoration: none; color: #fff;}
-  a:active {text-decoration: none; color: #fff;}
+const LinkBox = styled.div`
+  margin-bottom: 20px;
 `
 
 const Capyright = styled.p`
@@ -38,23 +24,10 @@ const Capyright = styled.p`
 
 const Footer = ({ }) => (
   <StyledFooter>
-    <Contect>
-      <Item>
-        <a href="http://kms1837.github.io/">
-          <FontAwesomeIcon icon={faUser} size="2x"/>
-        </a>
-      </Item>
-      <Item>
-        <a href="https://github.com/kms1837">
-          <FontAwesomeIcon icon={faGithub} size="2x"/>
-        </a>
-      </Item>
-      <Item>
-        <a href="mailto:kms1837@gmail.com">
-          <FontAwesomeIcon icon={faMailBulk} size="2x"/>
-        </a>
-      </Item>
-    </Contect>
+    <LinkBox>
+      <Contect />
+    </LinkBox>
+    
     <Capyright>
       kms1837 © 2020
     </Capyright>

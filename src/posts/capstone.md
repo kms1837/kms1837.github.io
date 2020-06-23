@@ -7,6 +7,7 @@ date: "2020-06-16"
 github: "https://github.com/kms1837/capstone_4"
 file: ""
 category: "Web"
+images: ["capstone/2.png", "capstone/1.png", "capstone/3.png", "capstone/4.png", "capstone/5.png", "capstone/6.png", "capstone/7.png"]
 ---
 
 ### 소개

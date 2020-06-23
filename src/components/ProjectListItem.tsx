@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Image from "../components/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faUnity, faPython } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faUnity, faPython, faNpm } from "@fortawesome/free-brands-svg-icons";
 import { faGamepad, faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const ItemWrap = styled.div`
@@ -130,6 +130,8 @@ const ProjectListItem = props => {
                 return (<FontAwesomeIcon icon={faGlobe} size="2x"/>);
               case "python":
                 return (<FontAwesomeIcon icon={faPython} size="2x"/>);
+              case "npm":
+                return (<FontAwesomeIcon icon={faNpm} size="2x"/>);
             }
           })
           }

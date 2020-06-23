@@ -7,6 +7,7 @@ date: "2020-06-16"
 github: "https://github.com/kms1837/ProjectMS"
 file: ""
 category: "Game"
+images: ["ms/1.png", "ms/2.png", "ms/3.png", "ms/4.png", "ms/5.png"]
 ---
 
 ### 소개

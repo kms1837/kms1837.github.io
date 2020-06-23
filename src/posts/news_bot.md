@@ -7,6 +7,7 @@ date: "2020-06-16"
 github: "https://github.com/kms1837/discord-game_news-bot"
 file: ""
 category: "python"
+images: ["discord/1.png", "discord/2.png", "discord/3.png"]
 ---
 
 ### 소개

@@ -3,21 +3,13 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "../components/layouts/page-layout"
+import ImageSlider from "../components/image-slider"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileDownload, faLink } from "@fortawesome/free-solid-svg-icons"
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-
-const PictureSection = styled.div`
-`
-
-const PictureArticle = styled.article`
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-  min-height: 500px;
-`
+import { faGithub, faNpm } from "@fortawesome/free-brands-svg-icons";
 
 const ContentSection = styled.section`
+  position: relative;
   background: #fff;
   min-height: 1500px;
 `
@@ -28,23 +20,17 @@ const ContentArticle = styled.article`
 `
 
 const Title = styled.h1`
-  position: absolute;
-  bottom: -20px;
-
-  color: #fff;
-  margin: 0;
   text-align: center;
-  font-size: 80px;
+  font-size: 70px;
   width: 100%;
-
-  user-select: none;
 `
 
 const Links = styled.div`
   text-align: center;
   padding: 10px 0;
   margin: 0 auto;
-  width: 300px;
+  width: 200px;
+  height: 65px;
   border: 2px solid #777;
   border-radius: 10px;
 
@@ -61,13 +47,10 @@ export default function Template({
 
   return (
     <Layout>
-      <PictureSection>
-        <PictureArticle>
-          <Title>{frontmatter.title}</Title>
-        </PictureArticle>
-      </PictureSection>
+      <ImageSlider images={frontmatter.images}/>
       <ContentSection>
         <ContentArticle>
+          <Title>{frontmatter.title}</Title>
           <Links>
             {frontmatter.github && <a href={frontmatter.github}>
               <FontAwesomeIcon icon={faGithub} size="2x"/>
@@ -77,6 +60,9 @@ export default function Template({
             </a>}
             {frontmatter.url && <a href={frontmatter.url}>
               <FontAwesomeIcon icon={faLink} size="2x"/>
+            </a>}
+            {frontmatter.npm && <a href={frontmatter.npm}>
+              <FontAwesomeIcon icon={faNpm} size="2x"/>
             </a>}
           </Links>
           {/* <h2>{frontmatter.date}</h2> */}
@@ -99,7 +85,9 @@ export const pageQuery = graphql`
         title
         github
         file
+        npm
         url
+        images
       }
     }
   }

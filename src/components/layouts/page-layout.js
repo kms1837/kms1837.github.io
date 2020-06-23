@@ -15,7 +15,7 @@ import Footer from "../footer"
 import "./page-layout.css"
 
 const Wrap = styled.div`
-  padding-top: ${props=>(props.headerHeight)}px;
+  /* padding-top: ${props=>(props.headerHeight)}px; */
 `
 
 const useScroll = () => {
