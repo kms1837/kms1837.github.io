@@ -46,7 +46,7 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
 
   return (
-    <Layout>
+    <Layout hiddenHeaderMenu={true}>
       <ImageSlider images={frontmatter.images}/>
       <ContentSection>
         <ContentArticle>

@@ -43,7 +43,7 @@ const useScroll = () => {
   return scrollTop
 }
 
-const Layout = ({ children }) => {
+const Layout = ({ children, hiddenHeaderMenu }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -65,7 +65,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header height={headerHeight} siteTitle={data.site.siteMetadata.title} scrollTop={scrollTop} />
+      <Header height={headerHeight} siteTitle={data.site.siteMetadata.title} scrollTop={scrollTop} hiddenMenu={hiddenHeaderMenu} />
       <Wrap headerHeight={headerHeight}>
         <main>{childrenWithProps}</main>
       </Wrap>

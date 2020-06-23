@@ -72,7 +72,7 @@ const scrollToPosition = () => {
 }
 
 const Header = props => {
-  const { height, siteTitle, scrollTop } = props;
+  const { height, siteTitle, scrollTop, hiddenMenu } = props;
   return (
     <FixedHeader scrollTop={scrollTop}>
       <Menu height={height}>
@@ -83,12 +83,12 @@ const Header = props => {
             </Link>
           </MenuItem>
         </LeftMenu>
-        <CenterMenu>
+        {!hiddenMenu && <CenterMenu>
           <MenuItem scrollTop={scrollTop} onClick={ () => scrollToPosition(0)}>Home</MenuItem>
           <MenuItem scrollTop={scrollTop} onClick={ () => scrollTo('#About')}>About</MenuItem>
           <MenuItem scrollTop={scrollTop} onClick={ () => scrollTo('#Skill')}>Skill</MenuItem>
           <MenuItem scrollTop={scrollTop} onClick={ () => scrollTo('#Project')}>Project</MenuItem>
-        </CenterMenu>
+        </CenterMenu>}
         <RightMenu>
           <MenuItem scrollTop={scrollTop}>
             <a href="http://kms1837.github.io/">
