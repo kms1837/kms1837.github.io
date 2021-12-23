@@ -2,6 +2,14 @@
     "projects" : [
       {
         "thumbnail": "fantasy_office_thumbnail.jpg",
+        "title": "Jump Dash",
+        "desc": "개발중",
+        "url": "jump_dash",
+        "github": "https://github.com/kms1837/jump_dash",
+        "category": ["game", "unity"]
+      },
+      {
+        "thumbnail": "fantasy_office_thumbnail.jpg",
         "title": "이세계 동사무소",
         "desc": "이세계의 동사무소를 운영하는 액션 퍼즐게임",
         "url": "fantasy_offce",
@@ -55,14 +63,6 @@
         "url": "chrome_extension",
         "github": "https://github.com/kms1837/Ruliweb_Support",
         "category": ["web"]
-      },
-      {
-        "thumbnail": "lighthouse_thumbnail",
-        "title": "lighthouse",
-        "desc": "디자인 컴포넌트 라이브러리",
-        "url": "lighthouse",
-        "github": "",
-        "category": ["web", "npm"]
       },
       {
         "thumbnail": "capstone_thumbnail.jpg",
